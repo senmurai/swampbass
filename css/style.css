@@ -87,12 +87,35 @@ footer {
     font-size: x-small;
 }
 
-@media (max-width:550px){
+@media (max-width:760px){
     html{
     background-size: 5rem;
 }
     
+.menubox {
+    width: 100%;
+}
+    
+    .menu {
+ font-size: 3.2rem;
+    padding: 0.5rem;
+}
 
+    .text {
+        font-size: xx-large;
+            margin-bottom: 2rem;
+    }
+    
+
+    #columns figure{
+        font-size: 1rem;
+        padding: 0px;
+    }
+    @media (max-width:385px){
+        
+    }
+    
+    
 @media (max-width:250px){
     html{
     background-size: 5rem;
@@ -100,12 +123,14 @@ footer {
     
 .menubox {
         width: 100%;
+        flex-wrap: wrap;
     }
     
 .menu {
  text-align: center;
- font-size: medium;
+ font-size: xx-large;
  font-weight: bold;
+ padding: 0;
 }
     
     /* 기본적으로 타이틀과 본문 중앙정렬임, 
