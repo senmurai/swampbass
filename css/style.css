@@ -13,29 +13,22 @@ img {
     margin: 0px auto;
 }
 
-#menu {
+.menubox {
+    background: linear-gradient(slateblue, tomato);
     width: 80%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    text-align: center; 
+    display: flex;
+    flex-direction: row;
 }
 
- #menu ul li {
-    display: inline;
-    margin: 0px 1rem; 0px 0px;
-    list-style: none;
-    color: snow;
-    background-color: black;
-}
-
-#menu ul {
-    margin-block-start: 0rem;
-    margin-block-end: 0rem;
-}
-
-#menu li {
-    font-size: x-large;
+.menu {
+ list-style: none;
+ flex-grow: 1;
+ text-align: center;
+ font-size: x-large;
+ font-weight: bold;
 }
 
 a {
@@ -58,19 +51,18 @@ ol {
     }
     #columns figure{
         display: inline-block;
-        border: 0 solid rgba(0, 0, 0, 0.2);
+        border: 0;
         margin: 0;
         margin-bottom: 15px;
         padding: 10px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
      #columns figure img{
         width: 11rem;
     }
     #columns figure figcaption{
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: 1px;
         padding: 10px;
-        margin-top: 11px;
+        margin-top: 1px;
         text-align: center;
     }
 
@@ -100,10 +92,36 @@ footer {
     background-size: 5rem;
 }
     
-    #menu {
-    width: 90%;}
-    
-    .top {
-    width: 80%;
-    margin: 0% 10%;}
+
+@media (max-width:250px){
+    html{
+    background-size: 5rem;
 }
+    
+.menubox {
+        width: 100%;
+    }
+    
+.menu {
+ text-align: center;
+ font-size: medium;
+ font-weight: bold;
+}
+    
+    /* 기본적으로 타이틀과 본문 중앙정렬임, 
+artist.html, release.html : 왼쪽정렬로 묶고 타이틀만 id값으로 따로 다시 중앙정렬
+기본 컬럼 텍스트 리딩이 중앙정렬이 좋아서 이렇게함*/
+    
+    #title {
+    text-align: center;
+}
+    
+    .text {
+     text-align: center;
+    width: 100%;
+    margin: 0 0 50% 0;
+}
+    
+    footer {
+display: none;
+    }
